@@ -1,70 +1,279 @@
-@import "tailwindcss";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500&display=swap");
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+html {
+  font-size: 32px;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #111827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+p {
+  font-family: "Caveat", cursive;
+}
+
+/* Simple spacing scale (matches Tailwind-ish spacing) */
+:root {
+  --spacing: 0.25rem;
+}
+
+/* --- Utility classes you actually use --- */
+
+.min-h-screen {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mx-auto {
+  margin-inline: auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4); /* 1rem */
+}
+
+.px-6 {
+  padding-inline: calc(var(--spacing) * 6); /* 1.5rem */
+}
+
+.py-12 {
+  padding-block: calc(var(--spacing) * 12); /* 3rem */
+}
+
+.pt-8 {
+  padding-top: calc(var(--spacing) * 8); /* 2rem */
+}
+
+.pb-12 {
+  padding-bottom: calc(var(--spacing) * 12); /* 3rem */
+}
+
+.pb-20 {
+  padding-bottom: calc(var(--spacing) * 20); /* 5rem */
+}
+
+.mt-6 {
+  margin-top: calc(var(--spacing) * 6); /* 1.5rem */
+}
+
+.mb-3 {
+  margin-bottom: calc(var(--spacing) * 3); /* 0.75rem */
+}
+
+.mb-16 {
+  margin-bottom: calc(var(--spacing) * 16); /* 4rem */
+}
+
+/* vertical spacing between timeline items */
+.space-y-16 > * + * {
+  margin-top: calc(var(--spacing) * 16); /* 4rem */
+}
+
+/* Layout & text */
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+/* Colors (rose + cream palette) */
+.text-rose-700 {
+  color: #be123c;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.text-rose-800 {
+  color: #9f1239;
+  margin-bottom: 20px;
+}
+
+.text-rose-900 {
+  color: #881337;
+  margin-bottom: 20px;
+}
+
+/* Background gradient for the page */
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+.from-rose-50 {
+  --tw-gradient-from: #fff1f2;
+}
+
+.via-cream-50 {
+  /* If you wanted a true 3-stop gradient you'd adjust, but this is enough */
+  --tw-gradient-from: #fffbf5;
+}
+
+.to-rose-50 {
+  --tw-gradient-to: #fff1f2;
+}
+
+/* Simple width/height helpers */
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* Fade/slide-in animation */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-1000 {
+  transition-duration: 1s;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.translate-y-0 {
+  --tw-translate-y: 0;
+}
+
+.translate-y-8 {
+  --tw-translate-y: calc(var(--spacing) * 8); /* 2rem down */
+}
+
+/* --- Polaroid / flip card styles --- */
+
+.polaroid-container {
+  perspective: 1000px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.polaroid {
+  max-width: 600px;
+  background: #ffffff;
+  padding: 16px 16px 60px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.polaroid:hover {
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.polaroid.flipped {
+  transform: rotateY(180deg);
+}
+
+.rotate-left {
+  transform: rotate(-2deg);
+}
+
+.rotate-left.flipped {
+  transform: rotate(-2deg) rotateY(180deg);
+}
+
+.rotate-right {
+  transform: rotate(2deg);
+}
+
+.rotate-right.flipped {
+  transform: rotate(2deg) rotateY(180deg);
+}
+
+.polaroid-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.polaroid-caption {
+  margin-top: 16px;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 1.25rem;
+  color: #881337;
+}
+
+/* front/back faces */
+.polaroid-front,
+.polaroid-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.polaroid-back {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.polaroid-back-content {
+  font-family: "Caveat", cursive;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px;
+}
+
+/* preserve line breaks on back text */
+.whitespace-pre-line {
+  white-space: pre-line;
 }

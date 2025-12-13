@@ -35,7 +35,8 @@ const imageMap: { [key: string]: string } = {
   'seventh-date': 'seventh_date.jpeg',
   'surprise': '/surprise.jpg',
   'eighth-date': '/eighth_date.png',
-  'roblox-fnaf': '/roblox_fnaf.jpg'
+  'roblox-fnaf': '/roblox_fnaf.jpg',
+  'dads-birthday': 'dads_birthday.PNG'
 };
 
 export function TimelineEvent({ event, index }: TimelineEventProps) {

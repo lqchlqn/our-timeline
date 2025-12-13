@@ -108,7 +108,7 @@ export default function App() {
       image: "third-date",
       backText: 
       `
-        On October 31st, we had our third date. I got to show off my impeccable ability to miss the same easy shot 3 times in a row. We got to have a little heart to heart about our grandparents' deaths and past experiences with dating. Maybe you were just practicing your psychology skills, but I felt so heard and cared for by you, and felt so much closer to you by the end.
+        On October 31st, we had our third date. I got to show off my impeccable ability to miss the same easy shot 5 times in a row. We got to have a little heart to heart about our grandparents' deaths and past experiences with dating. Maybe you were just practicing your psychology skills, but I felt so heard and cared for by you, and felt so much closer to you by the end.
       `,
       flippable: true
     },
@@ -261,9 +261,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 via-cream-50 to-rose-50">
       <div className="mx-auto px-6 py-12">
-        <header className="text-center mb-16">
+        <header className="text-center">
           <h1 className="text-4xl mb-3 text-rose-900">Our Story</h1>
-          <p className="text-rose-700">A journey of us ♡</p>
         </header>
 
         <div className="space-y-16 pb-20">
