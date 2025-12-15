@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { TimelineEvent } from './components/TimelineEvent';
 
 export default function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
   const events = [
     {
       id: 1,
