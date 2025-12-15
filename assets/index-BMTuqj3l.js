@@ -50,9 +50,7 @@ Error generating stack: `+o.message+`
       `],image:"photo-1",backText:"I still remember what you were wearing. The way you smiled made my heart skip a beat. I'm so glad I said hello.",flippable:!1},{id:2,date:"September 15th, 2025",title:"",description:[""],image:"hinge-profile",backText:`
         On September 15th, 2025, our story began. On this day, I matched with a girl who I'd known for nearly 15 years on Hinge.
       `,flippable:!0},{id:3,date:"September 26th, 2025",title:"",description:[""],image:"her-number",backText:`
-        After over a week of talking, I (very smoothly) managed to get your number!
-        The number of a girl I would become very familiar with, and would grow to find
-        comfort and warmth in, over the next few months
+        After over a week of talking, I (very smoothly) managed to get your number! The number of a girl I would become very familiar with, and would grow to find comfort and warmth in, over the next few months
       `,flippable:!0},{id:4,date:"October 11th, 2025",title:"",description:[""],image:"first-date",backText:`
         On October 11th, we had our first date. Apart from nearly flashing me at the start, it couldn't have been more perfect. I'll never forget the way my heart lept when I saw you for the first time (insert lego batman gif). Part of me knew there and then that I no longer had a need for Hinge.
       `,flippable:!0},{id:5,date:"October 18th, 2025",title:"",description:[""],image:"pitbull",backText:`
