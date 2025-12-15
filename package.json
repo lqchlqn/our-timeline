@@ -57,6 +57,9 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
-            "deploy": "gh-pages -d dist"
-      }
+            "preview": "vite preview",
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build"
+      },
+      "homepage": "https://lqchlqn.github.io/our-timeline"
 }
