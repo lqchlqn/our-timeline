@@ -41,6 +41,18 @@ export default function App() {
       flippable: true
     },
     {
+      id: 30,
+      date: "September 15th, 2025",
+      title: "",
+      description: [""],
+      image: "hinge-profile",
+      backText: 
+      `
+        On September 15th, 2025, our story began. On this day, I matched with a girl who I'd known for nearly 15 years on Hinge.
+      `,
+      flippable: true
+    },
+    {
       id: 3,
       date: "September 26th, 2025",
       title: "",
